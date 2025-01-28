@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 # Configure GCS bucket and credentials
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "keys/credentials.json"  # Update the path
-GCS_BUCKET_NAME = ""
+GCS_BUCKET_NAME = "" # Add a name HERE
 
 def upload_to_gcs(file, bucket_name, destination_blob_name):
     """Uploads a file to GCS bucket."""
