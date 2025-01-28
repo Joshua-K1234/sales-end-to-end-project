@@ -34,6 +34,7 @@ Developed an automated ETL pipeline and a web interface with Flask and Google Cl
 
 ### Dataset
 - The dataset used contains all the transactions occurring between 01/12/2010 and 09/12/2011 for a UK-based and registered non-store online retail. The company mainly sells unique all-occasion gifts. Many customers of the company are wholesalers. [Link to the dataset](https://www.kaggle.com/datasets/carrie1/ecommerce-data)
+- The data is the data folder only contains rows for the country france, I removed all the other countries using python pandas. It is suitable to test the application.
 
 ## Challenges
 - **Cloud run functions code implementation**: Faced a slight challenge in using Cloud Run Functions for the first time but successfully implemented the code and gained valuable experience, however was unable to implement it in terraform.
