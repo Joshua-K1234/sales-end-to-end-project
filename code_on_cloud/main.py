@@ -5,15 +5,6 @@ import json
 
 # job_config is a class, you can view it online.
 
-"""
-What are storage and bigquery clients?
-storage is intialised
-then you can access a bucket and call it "bucket"
-then you can use "bucket" to access a file in a
-bucket and call it "blob".
-
-"""
-
 # Triggered by a change in a storage bucket
 # That's the point of framework, cloud event.
 # the event is the change.
