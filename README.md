@@ -1,5 +1,5 @@
 # sales-end-to-end-project
-Developed an automated ETL pipeline and a web interface with Flask and Google Cloud to upload, process, and analyze data from CSV files.
+Developed an automated ETL pipeline and a web interface with Flask and Google Cloud to upload, process, and analyze data from CSV files. This is my second version after adding improvements such as using terraform to generate infrastructure and improve the aesthetics of the flask website.
 - *GCS: means google cloud storage*
 
 <img src="https://github.com/Joshua-K1234/sales-end-to-end-project/blob/main/images/cloud%20project%20components.JPG" alt="Components diagram" width="(200/9)16" height="200"/>
@@ -21,28 +21,28 @@ Developed an automated ETL pipeline and a web interface with Flask and Google Cl
 ### Tools and Technologies:
 - **Python**: Flask, Google.cloud (Storage and BigQuery) Libaries.
 - **Google cloud**: Cloud storage bucket, Cloud run functions ,BigQuery, LookerStudio (Visualisation)
+- **Terraform**: Used terraform to generate all the infrastructure in the project with the exception of cloud run (I tried but couldn't get it to work).
 
 ### Dataset
 - The dataset used contains all the transactions occurring between 01/12/2010 and 09/12/2011 for a UK-based and registered non-store online retail. The company mainly sells unique all-occasion gifts. Many customers of the company are wholesalers. [Link to the dataset](https://www.kaggle.com/datasets/carrie1/ecommerce-data)
 
 ## Challenges
-- **Cloud run functions code implementation**: Faced a slight challenge in using Cloud Run Functions for the first time but successfully implemented the code and gained valuable experience.
+- **Cloud run functions code implementation**: Faced a slight challenge in using Cloud Run Functions for the first time but successfully implemented the code and gained valuable experience, however was unable to implement it in terraform.
 
 ## How to use
 1. **Clone the repository**.  
-2. **Set up Google Cloud**:  
-   - Create a storage bucket.  
-   - Create a BigQuery dataset.  
+2. **Set up Google Cloud**:
+   - Create a service account and json key, store these in a folder named keys and name the credentials, `credentials.json`
+   - Create and configure `terraform.tfvars`
+   - Use the terraform to create the google cloud storage bucket and setup bigquery.
    - Deploy Cloud Run functions using the `cloud_run_functions.py` file.  **ENSURE** the `requirements.txt` file includes `functions-framework==3.*` and `google-api-python-client`.  
-3. **Configure required variables**:  
+4. **Configure required variables**:  
    - Set `GCS_BUCKET_NAME` in `main.py`.  
    - Set `dataset_id` and `table_id` in `cloud_run_functions.py`.
-4. **Install and configure the Google Cloud SDK**.  
-5. **Run the web application**
-6. Set up Looker Studio to connect to BigQuery for data analysis.
+5. **Install and configure the Google Cloud SDK**.  
+6. **Run the web application**
+7. Set up Looker Studio to connect to BigQuery for data analysis.
 - Use the files in test data to ensure it works.
 
 ## Future Enchancements
-- **Improve webpage aesthetics**: I was focused primarily on cloud functionality, leaving limited time for web design so it was simple.
-- **Create cloud infrastructure with code**: Use Terraform to automate the creation of cloud components for better scalability and consistency.
-- **Secure Variable Storage**: Store sensitive variables in configuration files or environment variables to prevent accidental exposure and improve security, whilist also reducing the hassle of manually removing them when sharing code, and make it easier for other users to configure and use the application.
+- **Cloud run functionality**: I could try to tilter data (e.g., keep rows with country = "France") before loading it into BigQuery using pandas or /tmp.
