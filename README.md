@@ -10,7 +10,7 @@ Developed an automated ETL pipeline and a web interface with Flask and Google Cl
 - **Python Flask Interface**: Developed a user-friendly interface using Python and Flask, enabling users to upload data (Csv) directly to a Google Cloud Storage bucket. It would let users know whether the file had been successfully uploaded to the cloud or not.
 - **Connection**: Connected to the cloud using a created service account's credentials.
 
-<img src="https://github.com/Joshua-K1234/sales-end-to-end-project/blob/main/images/website.JPG" alt="Components diagram" width="(400/9)16" height="400"/> 
+<img src="https://github.com/Joshua-K1234/sales-end-to-end-project/blob/main/images/website.JPG" alt="Components diagram" width="(300/9)16" height="300"/> 
 
 ### Cloud Storage Buckets:
 - **Cloud file storage**: Created a google cloud storage bucket to store the uploaded files on the cloud.
