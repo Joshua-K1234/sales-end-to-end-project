@@ -49,7 +49,7 @@ Developed an automated ETL pipeline and a web interface with Flask and Google Cl
    - Set `GCS_BUCKET_NAME` in `main.py`.  
    - Set `dataset_id` and `table_id` in `cloud_run_functions.py`.
 5. **Install and configure the Google Cloud SDK**.  
-6. **Run the web application**
+6. **Run the web application**: Run main.py
 7. Set up Looker Studio to connect to BigQuery for data analysis.
 - Use the files in test data to ensure it works.
 
