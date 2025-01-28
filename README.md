@@ -44,7 +44,7 @@ Developed an automated ETL pipeline and a web interface with Flask and Google Cl
    - Create a service account and json key, store these in a folder named keys and name the credentials, `credentials.json`
    - Create and configure `terraform.tfvars`
    - Use the terraform to create the google cloud storage bucket and setup bigquery.
-   - Deploy Cloud Run functions using the `cloud_run_functions.py` file.  **ENSURE** the `requirements.txt` file includes `functions-framework==3.*` and `google-api-python-client`.  
+   - Deploy Cloud Run functions using the `main.py` file and `requirements.txt` file.
 4. **Configure required variables**:  
    - Set `GCS_BUCKET_NAME` in `main.py`.  
    - Set `dataset_id` and `table_id` in `cloud_run_functions.py`.
