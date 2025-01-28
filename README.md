@@ -2,7 +2,7 @@
 Developed an automated ETL pipeline and a web interface with Flask and Google Cloud to upload, process, and analyze data from CSV files.
 - *GCS: means google cloud storage*
 
-<img src="https://github.com/Joshua-K1234/sales-end-to-end-project/blob/main/Cloud%20project%20components%20visualisation.JPG " alt="Components diagram" width="(200/9)16" height="200"/>
+<img src="https://github.com/Joshua-K1234/sales-end-to-end-project/blob/main/images/cloud%20project%20components.JPG" alt="Components diagram" width="(200/9)16" height="200"/>
 
 ## Key Components
 
