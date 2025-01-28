@@ -14,11 +14,18 @@ Developed an automated ETL pipeline and a web interface with Flask and Google Cl
 
 ### Cloud Storage Buckets:
 - **Cloud file storage**: Created a google cloud storage bucket to store the uploaded files on the cloud.
+- **Created with Terraform**
 
 ### Cloud run function:
 - **Automatic processing**: Configured a Google Cloud Run function to instantly detect file uploads in the storage bucket and send them to BigQuery for further processing.
 - **Custom Trigger**: Changed the default trigger from "HTTPS" to "Cloud Storage" with the event set to "Finalized" (triggered when a file is uploaded) and linked it to the designated bucket.
 - **Code Implementation**: Developed a Python script to load data from Google Cloud Storage (GCS) into BigQuery.
+
+### BigQuery
+- **Terraform Setup**: Since terraform setup the dataset, no further work was needed. The table is created by the cloud run function if it doesn't already exist.
+
+### DataLookerStudio
+- **Connected to BigQuery**: Easily connected by clicking "Add Data," selecting "BigQuery," and following the prompts.
 
 ### Tools and Technologies:
 - **Python**: Flask, Google.cloud (Storage and BigQuery) Libaries.
